@@ -44,9 +44,9 @@
             </figcaption>
         </figure>
         <!-- local info -->
-        <h2 class="text-uppercase fw-bold fst-italic">latest trend: <data value="28/12/2024">28/12/2024</data></h2>
-        <marquee class="border border-primary fw-bold" width="100%" direction="left" height="auto">
-            Stay informed about the latest news in your surroundings. சாமானியனின் குரல் உலகம் அறிய
+        <h2 class="text-uppercase fw-bold fst-italic">latest trend:</h2><h4><p id="date"></p></h4>
+        <marquee class="border border-primary fw-bold" id="TREND_news" width="100%" direction="left" height="auto">
+            <span id="running">போத்தீஸ் மற்றும் மின்மினி செயலி இணைந்து நடத்திய கல்லூரி மாணவிகளுக்கான சேலை தின சிறப்பு நிகழ்ச்சி வெற்றிகரமாக நிறைவு!</span>
         </marquee>
         
         <!-- top button --> 
@@ -61,7 +61,11 @@
                 </button>
             </a>
         </div>
-        
+        <script>
+            const d = new Date();
+            d.setFullYear(2020);
+            document.getElementById("date").innerHTML = d;
+        </script>
         
 
     </div>
@@ -570,10 +574,13 @@
                 </ul>
             </div>
         </nav>
+        <input type="text" id="testing">
     <!-- end -->
     </div>
 
+
     <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/js/script.js"></script>
 </body>
 </html>

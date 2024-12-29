@@ -1,8 +1,3 @@
-
-alert("Warning: Only administrators are authorized to use this. If you are not an administrator, please logout.")
-
-document.getElementById("editing_post").style.display = "none";
-
 // login system
 function login() {
     var username = document.getElementById("userid").value;
@@ -28,4 +23,10 @@ function login() {
     }
 }
 
+// LATEST TREND
+function test(){
+    var x = document.getElementById("testing").value;
+}
 
+var runningnews = document.getElementById("running").textContent;
+console.log(runningnews)
