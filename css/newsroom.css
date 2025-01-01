@@ -194,3 +194,10 @@ button {
   border: none;
   background: transparent;
 }
+.bgvideo{
+  background-image: url(/assets/newsroom/local.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
