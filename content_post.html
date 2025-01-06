@@ -21,7 +21,7 @@
         </div>
         
     
-        <form action="https://sheetdb.io/api/v1/x77hskh0v4nva" method="post">
+        <form action="https://sheetdb.io/api/v1/x77hskh0v4nva" method="post" id="sheetdb-form">
             <div class="mb-3">
                 <select class="form-select form-select-lg mb-3" name="data[Chandigarh]" aria-label="Large select example" required>
                     <option selected value="" >========== select Chandigarh ==========</option>
@@ -67,8 +67,32 @@
         
     </div>
     <!-- js -->
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            alertbox.render({
+            alertIcon: 'success',
+            title: 'Thank You!',
+            message: 'Your news has been submitted successfully.',
+            btnTitle: 'Ok',
+            border:true
+            });
+          });
+        });
+    </script>
+    <script src="https://sheetdb.io/handlebars.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/noumanqamar450/alertbox@main/version/1.0.2/alertbox.min.js"></script>
     <script src="/js/script.js"></script>
 </body>
 </html>
+
